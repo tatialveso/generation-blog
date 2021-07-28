@@ -1,3 +1,13 @@
-.navbar img {
-  width: 6.25rem;
+.navbar {
+  background-color: var(--bright-yellow);
 }
+
+.navbar img {
+  width: 6rem;
+}
+
+a {
+  color: var(--white);
+  font-weight: 600;
+}
+
