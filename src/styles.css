@@ -20,6 +20,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  height: 100vh;
+}
+
 /* login & register */
 .bg-color {
   height: 100vh;
