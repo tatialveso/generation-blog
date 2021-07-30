@@ -7,8 +7,8 @@ import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   { path: '',   redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'cadastro', component: RegisterComponent },
+  { path: 'contato', component: ContactComponent },
 ];
 
 @NgModule({
