@@ -1,0 +1,15 @@
+/* carousel */
+#carousel img {
+  object-fit: cover;
+  height: 300px;
+}
+/* card */
+.card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.btn {
+  background-color: var(--bright-pink);
+  color: var(--white);
+}
