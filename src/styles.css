@@ -59,15 +59,11 @@ body {
 }
 
 .p-register>a {
-  color: var(--bright-yellow);
+  color: var(--bright-yellow) !important;
 }
 
 .p-register>a:hover {
   text-decoration: none;
-  color: var(--bright-pink);
-}
-
-input::placeholder {
-  font-size: .8rem;
-  letter-spacing: .5px;
+  color: var(--bright-pink) !important;
+  cursor: pointer;
 }

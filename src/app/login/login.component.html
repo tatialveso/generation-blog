@@ -7,18 +7,18 @@
     <form class="login-form">
       <div class="form-group">
         <label>Endereço de e-mail</label>
-        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite seu melhor e-mail">
+        <input [(ngModel)]='userLogin.login' type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite seu melhor e-mail">
       </div>
 
       <div class="form-group">
         <label>Senha</label>
-        <input type="password" class="form-control" placeholder="Digite sua senha">
+        <input [(ngModel)]='userLogin.senha' type="password" class="form-control" placeholder="Digite sua senha">
       </div>
 
       <div class="d-flex justify-content-center">
-        <button type="submit" class="mt-2 p-2 btn">Entrar</button>
+        <button type="submit" class="mt-2 p-2 btn" (click)='login()'>Entrar</button>
       </div>
-      <p class="p-register text-center mt-3 mb-0">Ainda não tem cadastro? <a href="/cadastro">Cadastre-se!</a></p>
+      <p class="p-register text-center mt-3 mb-0">Ainda não tem cadastro? <a routerLink='/cadastro'>Cadastre-se!</a></p>
     </form>
   </div>
 </section>
