@@ -12,12 +12,12 @@
       </div>
       <div class="form-group">
         <label for="login">Endereço de e-mail *</label>
-        <input [(ngModel)]='user.login' name="login" type="email" class="form-control"
+        <input [(ngModel)]="user.login" name="login" type="email" class="form-control"
           placeholder="Digite seu melhor e-mail" required>
       </div>
       <div class="form-group">
         <label for="foto">Link da Foto</label>
-        <input [(ngModel)]='user.foto' name="foto" type="text" id="foto" class="form-control"
+        <input [(ngModel)]="user.foto" name="foto" type="text" id="foto" class="form-control"
           placeholder="Link da sua foto">
       </div>
       <div class="form-group">
@@ -25,10 +25,14 @@
         <input (input)='confirmPassword($event)' name="senha" type="password" class="form-control"
           placeholder="Digite sua senha" required>
       </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar Senha *</label>
+        <input [(ngModel)]="user.senha" class="form-control" type="password" name="confirmPassword" placeholder="Confirme sua senha">
+      </div>
       <div class="row">
         <div class="col-6">
           <label for="dataAniversario">Data de nasc.*</label>
-          <input [(ngModel)]='user.dataAniversario' name="dataAniversario" type="date" class="form-control" required>
+          <input [(ngModel)]="user.dataAniversario" name="dataAniversario" type="date" class="form-control" required>
         </div>
         <div class="col-6">
           <label for="admin">Tipo de usuário *</label>
@@ -41,7 +45,7 @@
       </div>
 
       <div class="d-flex justify-content-center">
-        <button type="submit" class="mt-2 p-2 btn" (click)='register()'>Entrar</button>
+        <button type="submit" class="mt-2 p-2 btn" (click)='register()'>Cadastrar</button>
       </div>
       <p class="p-register text-center mt-3 mb-0">Já possui cadastro? <a routerLink='/login'>Entre!</a></p>
     </form>

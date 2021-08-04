@@ -6,13 +6,13 @@
   <div class="bg-color col d-flex justify-content-center align-items-center p-0">
     <form class="login-form">
       <div class="form-group">
-        <label>Endereço de e-mail</label>
-        <input [(ngModel)]='userLogin.login' type="email" class="form-control" aria-describedby="emailHelp" placeholder="Digite seu melhor e-mail">
+        <label for="login">Endereço de e-mail</label>
+        <input [(ngModel)]='userLogin.login' type="email" name="login" class="form-control" aria-describedby="emailHelp" placeholder="Digite seu melhor e-mail">
       </div>
 
       <div class="form-group">
-        <label>Senha</label>
-        <input [(ngModel)]='userLogin.senha' type="password" class="form-control" placeholder="Digite sua senha">
+        <label for="senha">Senha</label>
+        <input [(ngModel)]='userLogin.senha' type="password" name="senha" class="form-control" placeholder="Digite sua senha">
       </div>
 
       <div class="d-flex justify-content-center">

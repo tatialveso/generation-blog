@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class RegisterComponent implements OnInit {
 
   user: User = new User;
-  confirmPass: string;
+  password: string;
   userAdmin: boolean;
 
   constructor(
@@ -24,17 +24,17 @@ export class RegisterComponent implements OnInit {
   }
 
   confirmPassword(event: any) {
-    this.confirmPass = event.target.value
+    this.password = event.target.value;
   }
 
   userType(event: any) {
-    this.userAdmin = event.target.value
+    this.userAdmin = event.target.value;
   }
 
   register() {
-    this.user.admin = this.userAdmin
+    this.user.admin = this.userAdmin;
 
-    if(this.user.senha != this.confirmPass) {
+    if(this.user.senha != this.password) {
       alert('A senha está incorreta!');
     } else {
       this.authService.register(this.user).subscribe((resp: User) => {
