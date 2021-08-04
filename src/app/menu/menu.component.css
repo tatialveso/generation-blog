@@ -11,3 +11,20 @@ a {
   font-weight: 600;
 }
 
+/* profile */
+.profile-img {
+  width: 3rem !important;
+}
+
+.profile-hello {
+  padding: 0 15px;
+}
+
+/* logout */
+article>a {
+  cursor: pointer;
+}
+
+article>a:hover {
+  color: var(--bright-pink);
+}
