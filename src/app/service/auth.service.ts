@@ -11,7 +11,9 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   register(user: User): Observable<User> {
     return this.http.post<User>('https://generation-blog.herokuapp.com/usuarios/cadastrar', user);

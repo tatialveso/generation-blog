@@ -32,6 +32,8 @@
   </a>
 </div>
 
+<button class="btn btn-pink mr-2" data-toggle="modal" data-target="#newPost">Nova Postagem</button>
+
 <div class="container row my-3 mx-auto">
   <div class="col">
     <div class="card">
@@ -63,6 +65,44 @@
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
           content.</p>
         <a href="#" class="btn">Ler mais</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="newPost" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalCenterTitle">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input type="text" class="form-control" id="titulo" placeholder="Crie um título para a sua postagem">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink='/temas'>cadastre um novo</a>: </label>
+          <select name="tema" id="tema" class="form-control">
+            <option value="">Temas</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Publicar</button>
       </div>
     </div>
   </div>
