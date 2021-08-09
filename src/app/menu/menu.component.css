@@ -1,5 +1,6 @@
 .navbar {
-  background-color: var(--bright-yellow);
+  background-color: var(--bright-pink);
+  color: var(--white);
 }
 
 .navbar img {
