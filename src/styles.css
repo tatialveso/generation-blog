@@ -41,35 +41,30 @@ body {
   border-radius: 10px;
 }
 
-.login-form button {
-  background-color: var(--bright-yellow);
-  color: var(--white);
-  width: 100%;
-  font-weight: 500;
-  transition: .3s ease;
-}
-
-.login-form button:hover {
-  color: var(--white);
-  opacity: .7;
-}
-
 .p-register {
   font-size: .8rem;
 }
 
 .p-register>a {
-  color: var(--bright-yellow) !important;
+  color: var(--bright-yellow);
 }
 
 .p-register>a:hover {
   text-decoration: none;
-  color: var(--bright-pink) !important;
+  color: var(--bright-pink);
   cursor: pointer;
 }
 
 /* buttons */
-.btn-pink {
-  background-color: var(--bright-pink) !important;
+.btn-yellow {
+  background-color: var(--bright-yellow) !important;
   color: var(--white) !important;
+  width: 100%;
+  font-weight: 500;
+  transition: .3s ease;
+}
+
+.btn-yellow:hover {
+  color: var(--white);
+  opacity: .7;
 }
