@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { ThemeComponent } from './theme/theme.component';
 import { EditThemeComponent } from './edit/edit-theme/edit-theme.component';
+import { DeleteThemeComponent } from './delete/delete-theme/delete-theme.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EditThemeComponent } from './edit/edit-theme/edit-theme.component';
     ContactComponent,
     HomeComponent,
     ThemeComponent,
-    EditThemeComponent
+    EditThemeComponent,
+    DeleteThemeComponent
   ],
   imports: [
     BrowserModule,

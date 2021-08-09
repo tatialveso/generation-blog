@@ -5,13 +5,14 @@ import { ThemeService } from 'src/app/service/theme.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-edit-theme',
-  templateUrl: './edit-theme.component.html',
-  styleUrls: ['./edit-theme.component.css']
+  selector: 'app-delete-theme',
+  templateUrl: './delete-theme.component.html',
+  styleUrls: ['./delete-theme.component.css']
 })
-export class EditThemeComponent implements OnInit {
+export class DeleteThemeComponent implements OnInit {
 
-  theme: Theme = new Theme();
+  theme: Theme = new Theme()
+  idTheme: number
 
   constructor(
     private themeService: ThemeService,
@@ -24,8 +25,8 @@ export class EditThemeComponent implements OnInit {
       this.router.navigate(['/login']);
     }
 
-    let id = this.route.snapshot.params['id'];
-    this.findByIdTheme(id);
+    this.idTheme = this.route.snapshot.params['id'];
+    this.findByIdTheme(this.idTheme);
   }
 
   findByIdTheme(id: number) {
@@ -34,10 +35,9 @@ export class EditThemeComponent implements OnInit {
     })
   }
 
-  update() {
-    this.themeService.themePut(this.theme).subscribe((resp: Theme) => {
-      this.theme = resp
-      alert('Tema atualizado com sucesso!');
+  delete() {
+    this.themeService.themeDelete(this.idTheme).subscribe(() => {
+      alert('Tema deletado com sucesso!');
       this.router.navigate(['/temas']);
     })
   }

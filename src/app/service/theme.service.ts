@@ -33,4 +33,8 @@ export class ThemeService {
   themePut(theme: Theme): Observable<Theme> {
     return this.http.put<Theme>('https://generation-blog.herokuapp.com/temas', theme, this.token)
   }
+
+  themeDelete(id: number) {
+    return this.http.delete(`https://generation-blog.herokuapp.com/temas/${id}`, this.token)
+  }
 }
