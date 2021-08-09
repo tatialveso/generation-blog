@@ -22,7 +22,15 @@ export class ThemeService {
     return this.http.get<Theme[]>('https://generation-blog.herokuapp.com/temas', this.token)
   }
 
+  getByIdTheme(id: number): Observable<Theme> {
+    return this.http.get<Theme>(`https://generation-blog.herokuapp.com/temas/${id}`, this.token)
+  }
+
   themePost(theme: Theme): Observable<Theme> {
     return this.http.post<Theme>('https://generation-blog.herokuapp.com/temas', theme, this.token)
+  }
+
+  themePut(theme: Theme): Observable<Theme> {
+    return this.http.put<Theme>('https://generation-blog.herokuapp.com/temas', theme, this.token)
   }
 }
