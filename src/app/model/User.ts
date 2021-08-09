@@ -8,5 +8,5 @@ export class User {
   public senha: string;
   public foto: string;
   public admin: boolean;
-  public postagem: Post[]
+  public postagem: Post;
 }

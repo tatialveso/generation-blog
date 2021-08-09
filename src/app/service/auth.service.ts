@@ -23,6 +23,10 @@ export class AuthService {
     return this.http.post<UserLogin>('https://generation-blog.herokuapp.com/usuarios/logar', userLogin);
   }
 
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`https://generation-blog.herokuapp.com/usuarios/${id}`)
+  }
+
   logged() {
     let ok: boolean = false;
 

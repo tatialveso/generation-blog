@@ -6,6 +6,6 @@ export class Post {
   public data: string;
   public titulo: string;
   public texto: string;
-  public usuario: User[];
-  public tema: Theme[];
+  public usuario: User;
+  public tema: Theme;
 }
